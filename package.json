@@ -25,6 +25,7 @@
     ]
   },
   "scripts": {
+    "p": "vsce publish",
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
