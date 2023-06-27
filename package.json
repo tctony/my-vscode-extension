@@ -3,6 +3,7 @@
   "displayName": "tctony",
   "description": "",
   "version": "0.0.1",
+  "publisher": "tctony",
   "engines": {
     "vscode": "^1.79.0"
   },
