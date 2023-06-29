@@ -2,6 +2,7 @@
   "name": "tctony",
   "displayName": "tctony",
   "description": "",
+  "repository": "https://github.com/tctony/my-vscode-extension",
   "version": "0.0.3",
   "publisher": "tctony",
   "engines": {
