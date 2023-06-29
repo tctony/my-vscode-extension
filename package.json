@@ -2,7 +2,7 @@
   "name": "tctony",
   "displayName": "tctony",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "tctony",
   "engines": {
     "vscode": "^1.79.0"
@@ -16,11 +16,18 @@
     "commands": [
       {
         "command": "tctony.helloWorld",
-        "title": "tctony: Hello World"
+        "title": "Hello World",
+        "category": "tctony"
       },
       {
         "command": "tctony.switchHeaderSource",
-        "title": "tctony: Switch Header Source"
+        "title": "Switch Header Source",
+        "category": "tctony"
+      },
+      {
+        "command": "tctony.xw",
+        "title": "xw ...",
+        "category": "tctony"
       }
     ]
   },

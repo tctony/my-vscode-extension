@@ -1,3 +1,4 @@
+import * as cp from 'child_process';
 import * as vscode from 'vscode';
 
 function registerCommand(context: vscode.ExtensionContext, command: string, callback: (...args: any[]) => any, thisArg?: any): void {
@@ -19,6 +20,12 @@ export function activate(context: vscode.ExtensionContext) {
 		} else {
 			vscode.commands.executeCommand('C_Cpp.SwitchHeaderSource');
 		}
+	});
+
+	// 调用xw命令
+	registerCommand(context, 'tctony.xw', (args: any[]) => {
+		const ret = cp.spawnSync('xw', args ?? []);
+		return ret.stdout.toString();
 	});
 }
 
