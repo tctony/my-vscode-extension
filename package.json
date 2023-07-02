@@ -3,7 +3,7 @@
   "displayName": "tctony",
   "description": "",
   "repository": "https://github.com/tctony/my-vscode-extension",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "tctony",
   "engines": {
     "vscode": "^1.79.0"
