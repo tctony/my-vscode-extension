@@ -24,14 +24,16 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// 调用xw命令
 	registerCommand(context, 'tctony.xw', (args: any[]) => {
-		console.log(`running xw ${args}`);
+		const cwd = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
+		console.log(`running \`xw ${args.join(' ')}\` in ${cwd}`);
 
-		const ret = cp.spawnSync('xw', args ?? []);
-		const out = ret.stdout.toString();
+		const ret = cp.spawnSync('xw', args ?? [], { cwd, });
+		const stdout = (ret.stdout?.toString() ?? '').trim();
+		const stderr = (ret.error?.toString() ?? '').trim();
 
-		console.log(`got output: out`);
+		console.log(`status: ${ret.status}, stdout: '${stdout}', stderr: '${stderr}'`);
 
-		return out;
+		return stdout;
 	});
 }
 
